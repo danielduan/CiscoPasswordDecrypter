@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Cisco_Password_Decrypter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cisco_Password_Decrypter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" Margin="70,57,0,0" TextWrapping="Wrap" Text="Cisco Password Decrypter" VerticalAlignment="Top" Height="71" Width="839" FontSize="72"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="369" Width="1180" FontSize="20">
+        	<Run Text="In commercial Cisco routers, password hashes are located in the configuration file. It can be revealed using the command"/>
+        	<LineBreak/>
+        	<Run Text="&quot;show tech-support&quot; without the quotes and looks like the following:"/>
+        	<LineBreak/>
+        	<Run Text="..."/>
+        	<LineBreak/>
+        	<Run Text="hostname routerA"/>
+        	<LineBreak/>
+        	<Run Text=" !"/>
+        	<LineBreak/>
+        	<Run Text=" aaa new-model"/>
+        	<LineBreak/>
+        	<Run Text=" aaa authentication login default local"/>
+        	<LineBreak/>
+        	<Run Text=" aaa authentication ppp default if-needed local"/>
+        	<LineBreak/>
+        	<Run Text=" enable secret 5 &lt;removed&gt;"/>
+        	<LineBreak/>
+        	<Run Text=" !"/>
+        	<LineBreak/>
+        	<Run Text=" username jdoe password 7 &lt;removed&gt;"/>
+        	<LineBreak/>
+        	<Run Text=" username headquarters password 7 &lt;removed&gt;"/>
+        	<LineBreak/>
+        	<Run Text=" username hacker password 7 &lt;removed&gt;"/>
+        	<LineBreak/>
+        	<Run Text="..."/>
+        	<LineBreak/>
+        	<Run Text="Note: Only 'level 7' passwords can be decrypted at this moment."/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="70,557,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="32" Width="89" FontSize="20">
+        	<Run Text="Hash:"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <Button x:Name="buttonDecrypt" Content="Decrypt" HorizontalAlignment="Left" Margin="625,545,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.377,-0.126" FontSize="16" Click="buttonDecrypt_Click"/>
+        <TextBox x:Name="textboxOutputPassword" HorizontalAlignment="Left" Margin="178,612,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427" TextChanged="textboxOutputPassword_TextChanged" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="70,619,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="32" Width="103" FontSize="20"/>
+        <TextBox x:Name="textboxInputHash" HorizontalAlignment="Left" Margin="178,549,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427" FontSize="16" TextChanged="textboxInputHash_TextChanged"/>
+
+    </Grid>
+</Page>

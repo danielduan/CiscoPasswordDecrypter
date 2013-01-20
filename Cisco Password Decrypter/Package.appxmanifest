@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="28875DanDuan.CiscoPasswordDecrypter" Publisher="CN=FDAD2CFB-44D8-4CC9-8BE8-3BB50BA3A3A0" Version="1.0.1.1" />
+  <Properties>
+    <DisplayName>Cisco Password Decrypter</DisplayName>
+    <PublisherDisplayName>danielduan</PublisherDisplayName>
+    <Logo>store.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Cisco_Password_Decrypter.App">
+      <VisualElements DisplayName="Cisco Password Decrypter" Logo="icon 150.png" SmallLogo="icon 30.png" Description="Cisco Password Decrypter" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="allLogos" WideLogo="icon 310.png" />
+        <SplashScreen Image="splash.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+</Package>
